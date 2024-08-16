@@ -1,0 +1,7 @@
+"./MNIST.obj"
+"./Q_learn.obj"
+"./clause_acc_data.obj"
+"./mementos.obj"
+"../lnk_msp430fr5994.cmd"
+-llibmath.a
+-llibc.a
