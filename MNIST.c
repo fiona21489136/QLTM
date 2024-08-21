@@ -93,6 +93,7 @@ int8_t chunking_infer_for_Q(const uint32_t *features_c){
 
             cur_state = get_cur_state(c, clause);
             int8_t action = choose_action(cur_state);
+            //printf("a%d\n",action);
             // 0 : full run
             // 1 : prun run
             // 2 : skip
@@ -250,15 +251,14 @@ int main(void)
 {
 
     WDTCTL = WDTPW | WDTHOLD;   // stop watch-dog timer
-    //PM5CTL0 &= ~LOCKLPM5;
+
     SetUp();  // system clock
-    //IsReset();
     int i;
     // Timer setup
     init_timerA();
     init_timerB();
     init_Q();
-    printf("init OK!\n");
+    //printf("init OK!\n");
     srand(time(NULL));
 
     // INFERENCE MODE START

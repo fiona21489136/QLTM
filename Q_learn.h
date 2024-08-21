@@ -17,8 +17,8 @@
 #define N_QSTATES 8
 #define N_ACTIONS 4  // full run, prun run, skip, halt
 
-#define EPISODES 10000 // # of sampled data
-#define GAMMA 0.75
+#define EPISODES 40 // # of sampled data
+#define GAMMA 0.85
 #define DIS_RATE 0.95 // discount rate . future is more important
 #define L_RATE 0.75 // learning rate .
 
@@ -34,7 +34,7 @@ extern volatile float epsilon;
 
 
 extern volatile float Q_table[N_QSTATES][N_ACTIONS];
-extern float Q_table_learned[N_QSTATES][N_ACTIONS];
+extern volatile float Q_table_learned[N_QSTATES][N_ACTIONS];
 extern volatile float rewards[N_QSTATES][N_ACTIONS];
 
 void init_Q();
